@@ -1,5 +1,4 @@
-import EmptyState from "../components/inputs/EmptyStates";
-
+import EmptyState from "../components/EmptyStates";
 const Users = () => {
   return (
     <div className=" hidden lg:block lg:pl-80 h-full">
