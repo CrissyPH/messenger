@@ -1,7 +1,6 @@
 "use client";
 
 import { User } from "@prisma/client";
-import React from "react";
 import Image from "next/image";
 
 interface AvatarProps {
