@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 import Avatar from "@/app/components/Avatar";
 import { format } from 'date-fns'
 import Image from "next/image";
+import { useState } from "react";
 
 interface MessageBoxProps {
     data: FullMessageType
@@ -18,6 +19,7 @@ const MessageBox: React.FC<MessageBoxProps> = ({
 }) => {
 
     const session = useSession()
+    const [ imageModalOpen, setImageModalOpen ] = useState(false)
 
     const isOwn = session?.data?.user?.email === data?.sender?.email
     const seenList = (data.seen || [])
